@@ -1,35 +1,48 @@
-<h1>Eat Dat Burger!</h1>
+<header>
+    <h1>Eat Dat Burger!</h1>
+</header>
 
-<h2>Burgers Ready-to-Eat</h2>
-<ul>
-    {{#each burger}}
-        {{#unless devoured}}
-            <li>
-                {{this.id}}.
-                {{this.burger_name}}
-                <button data-id="{{id}}" type="submit" class='devour'>EAT IT! </button>
-            </li>
-            
-        {{/unless}}
-    {{/each}}
-</ul>
+<div class="container">
+    <h2>Burgers <br> Ready-to-Eat</h2>
+    <ul class="rdy" type='none'>
+        {{#each burger}}
+            {{#unless devoured}}
+                <li>
+                    {{this.id}}.
+                    {{this.burger_name}}
+                    <hr>
+                </li>
+                <img src="./assets/img/burger-eat-me.png" class='devour' data-id="{{id}}">
+            {{/unless}}
+        {{/each}}
+    </ul>
+</div>
 
-<h2>Burgers Eaten</h2>
-<ul>
-    {{#each burger}}
-        {{#if devoured}}
-            <li>
-                {{this.id}}.
-                {{this.burger_name}}
-            </li>
-        {{/if}}
-    {{/each}}
-</ul>
+<div class="container">
+   <form class="create-form">
+        <div class="form-group">
+            <label for="ca"><strong> What Burger would you like to order?</strong></label><br><br>
+            <input type="text" id="newBurger" name="name">
+        </div>
+        <button type="submit" class='submit'>Order Burger</button>
+    </form> 
+    <div class="main"></div>
+</div>
 
-<form class="create-form">
-    <div class="form-group">
-        <label for="ca">What Burger would you like?</label>
-        <input type="text" id="newBurger" name="name">
-    </div>
-    <button type="submit" class='submit'>Make Burger</button>
-</form>
+<div class="container">
+   <h2 class="right">Burgers <br>Eaten</h2>
+    <ul class="ate" type='none'>
+        {{#each burger}}
+            {{#if devoured}}
+                <li class="devoured">
+                    {{this.id}}.
+                    {{this.burger_name}}
+                    <hr>
+                </li>
+            {{/if}}
+        {{/each}}
+    </ul> 
+</div>
+ <footer>&copy; 2018 RICH SCHIFFER</footer>  
+
+

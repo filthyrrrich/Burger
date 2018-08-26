@@ -1,5 +1,120 @@
-li, ul {
-    width: 70%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    margin-bottom: 50px;
     padding: 10px;
-    margin: 10px;
+    background: white;
+    float: left;
+    border-radius: 15px;
+    border: solid 2px black;
+}
+
+li{
+    text-transform: capitalize;
+    width: 75%;
+    float: left;
+    padding: 10px;
+}
+
+img {
+    position: relative;
+    float: left;
+}
+
+.container {
+    position: relative;
+    margin: 0 1%;
+    width: 31.33%;
+    float: left;
+    height: 780px;
+    padding-top: 10px;
+}
+
+.create-form {
+    text-align: center;
+}
+
+.rdy {
+    font-size: 20px;
+    color: green;
+}
+
+.ate {
+    font-size: 20px;
+    color: red;
+}
+
+.devoured {
+    width: 100%;
+}
+
+body {
+    background: rgb(255, 166, 0);
+}
+.main {
+    height: 700px;
+    padding-top: 0px;
+    background-image: url('../img/huge-burger.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    margin: 0px;
+}
+
+h2 {
+    background: rgba(255, 255, 255, 0.529);
+    border-radius: 15px;
+    border: solid 2px black;
+    margin-bottom: 5px;
+}
+
+.devour {
+    position: relative;
+    top: -5px;
+    width: 75px;
+    height: 75px;
+}
+
+label, input {
+    font-size: 20px;
+}
+
+.submit {
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    color: white;
+    background-color: black;
+    border-top: solid 5px rgba(223, 219, 219, 0.845);
+    padding: 10px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-bottom: solid 5px rgba(223, 219, 219, 0.845);
+    padding: 10px; 
 }

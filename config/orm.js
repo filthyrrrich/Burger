@@ -1,4 +1,5 @@
 const connection = require("./connection.js");
+
 function objToSql(ob) {
     var arr = [];
   
@@ -31,9 +32,6 @@ var orm = {
     },
     insertOne: function(cols, vals, cb) {
         var queryString = `INSERT burgers (${cols.toString()}) VALUES (?);`;
-        console.log('cols:', cols);
-        
-        console.log(queryString);
         connection.query(queryString, vals, function(err, result) {
             if (err) throw err;
             cb(result);
@@ -41,13 +39,10 @@ var orm = {
     },
     updateOne: function  (table, objColVals, condition, cb) {
         var queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition};`;
-        console.log("condition---------", condition);
-        
-        console.log("UPDATE-------------",queryString);
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);
-        })
+        });
     }
 }
 
