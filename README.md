@@ -8,6 +8,16 @@ An app that allows the user to enter the name of a burger they wish to order and
 3. body-parser
 4. mysql
 
+## Built With
+* HTML5
+* CSS3
+* jQuery
+* Node
+* Express
+* Handlebars
+* mySQL
+* Heroku
+
 ## How to Use:
 
 User enters the name of a burger they wish to order. Once submitted,the burger is stored in the mySQL database and is displayed on the page under 'ready-to-eat'. If the user clicks the 'devour' button, the burger is moved to the 'eaten' section and is updated in the mySQL database as well.
