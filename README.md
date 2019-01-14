@@ -1,4 +1,4 @@
-# Burger
+# Eat Dat Burger
 
 An app that allows the user to enter the name of a burger they wish to order and store it in a mySQL database. 
 
